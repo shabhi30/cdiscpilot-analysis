@@ -72,11 +72,11 @@ cdiscpilot-analysis/
 └── README.md
 
 How to Reproduce
-# 1. Clone this repository
-# 2. Open cdiscpilot_analysis.R in RStudio
-# 3. Run the script from top to bottom
-# All packages are listed at the top — install once, load each session
-# Data downloads automatically from the public CDISC GitHub repository
+1. Clone this repository
+2. Open cdiscpilot_analysis.R in RStudio
+3. Run the script from top to bottom
+All packages are listed at the top — install once, load each session
+Data downloads automatically from the public CDISC GitHub repository
 
 Tools & Packages
 - R 4.4+ — analysis environment
