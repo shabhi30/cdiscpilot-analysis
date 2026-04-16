@@ -1,26 +1,26 @@
-Phase 3 Alzheimer's Trial — Biostatistical Analysis
-CDISC ADaM Pilot Dataset | R | Demographics | MMRM | Kaplan-Meier | Safety analysis
+**Phase 3 Alzheimer's Trial — Biostatistical Analysis**
+**CDISC ADaM Pilot Dataset | R | Demographics | MMRM | Kaplan-Meier | Safety analysis**
 
-Background
+**Background**
 Alzheimer's disease is a progressive neurodegenerative disorder affecting millions globally. This project replicates the primary biostatistical analyses from a Phase 3 randomized controlled trial testing Xanomeline, a muscarinic receptor agonist delivered via transdermal skin patch against placebo in patients with mild-to-moderate Alzheimer's disease.
 The dataset used is the publicly available CDISC ADaM Pilot Project dataset is a real FDA submission dataset widely used in the pharmaceutical industry for training and tool development. It contains data from 254 subjects across three treatment arms: Placebo, Xanomeline Low Dose (54mg), and Xanomeline High Dose (81mg).
 
-Objectives
+**Objectives**
 
 Confirm baseline comparability across treatment arms (Table 1)
 Analyze time to first dermatologic event by treatment arm (Kaplan-Meier)
 Estimate the treatment effect on cognitive decline using ADAS-Cog(11) (MMRM)
 
 
-Dataset
-
+Dataset**
+**
 | Dataset | Description | Rows | Key Variables |
 |---------|-------------|------|---------------|
 | ADSL | Subject-level demographics | 254 | AGE, SEX, RACE, TRT01P, MMSETOT |
 | ADTTE | Time to event | 254 | AVAL, CNSR, PARAM, TRTP |
 | ADQSADAS | ADAS-Cog questionnaire scores | ~3,000 | AVAL, CHG, BASE, AVISIT, PARAM |
 
-Methods
+**Methods**
 Table 1 — Baseline Demographics
 Descriptive statistics were computed for the Intent-to-Treat (ITT) population. Continuous variables are presented as mean (SD) and categorical variables as n (%). Between-arm differences were tested using ANOVA for continuous variables and chi-square for categorical variables.
 Kaplan-Meier Survival Analysis
@@ -34,7 +34,7 @@ Estimation method: REML
 Population: ITT
 Primary endpoint: Treatment difference at Week 24
 
-Results
+**Results**
 Table 1 — Baseline Demographics
 Baseline demographic and clinical characteristics were well balanced across treatment arms, confirming the integrity of randomization. Mean age was approximately 75 years, mean baseline MMSE was approximately 21 points (mild-to-moderate Alzheimer's), and the three arms were comparable on sex, race, BMI, and disease duration.
 Kaplan-Meier — Dermatologic Safety Signal
@@ -48,10 +48,10 @@ High Dose vs Placebo at Week 24: -1.04 ADAS-Cog points (p = 0.285, not significa
 Negative estimates indicate less cognitive decline (improvement) relative to placebo. ADAS-Cog is scored where higher = worse, so negative = better.
 Neither result reached conventional statistical significance (p < 0.05). However, the consistent directional trend for both doses and the clinically meaningful effect size for Low Dose (−1.65 points) suggest a potential efficacy signal that may be detectable in a larger adequately powered trial.
 
-Conclusions
+**Conclusions**
 Xanomeline showed a consistent but statistically underpowered efficacy signal in slowing cognitive decline in Alzheimer's disease. The Low Dose arm demonstrated a numerically larger treatment benefit than the High Dose arm — a counterintuitive finding explained by the tolerability data: 73% of High Dose patients experienced dermatologic events, with events occurring faster and earlier, likely affecting compliance and cognitive test performance.
 
-The integrated story:
+**The integrated story:**
 
 Randomization was successful (Table 1 — balanced baseline)
 The drug caused significantly more skin reactions than placebo, dose-dependently (Kaplan-Meier)
@@ -71,14 +71,14 @@ cdiscpilot-analysis/
 │   └── Table2_MMRM_Results.docx
 └── README.md
 
-How to Reproduce
+**How to Reproduce**
 # 1. Clone this repository
 # 2. Open cdiscpilot_analysis.R in RStudio
 # 3. Run the script from top to bottom
 # All packages are listed at the top — install once, load each session
 # Data downloads automatically from the public CDISC GitHub repository
 
-Tools & Packages
+**Tools & Packages**
 - R 4.4+ — analysis environment
 - haven 2.5+ — reads SAS .xpt files
 - tidyverse 2.0+ — data manipulation and plotting
@@ -87,7 +87,7 @@ Tools & Packages
 - mmrm — MMRM model fitting
 - flextable 0.9+ — exports tables to Word
 
-Key Statistical Concepts Demonstrated
+**Key Statistical Concepts Demonstrated**
 
 CDISC ADaM data standards — working with ADSL, ADTTE, ADQS datasets
 ITT vs Safety population — appropriate population selection per endpoint type
