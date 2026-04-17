@@ -2,7 +2,7 @@ Phase 3 Alzheimer's Trial — Biostatistical Analysis
 CDISC ADaM Pilot Dataset | R | Demographics | MMRM | Kaplan-Meier | Safety analysis
 
 Background
-Alzheimer's disease is a progressive neurodegenerative disorder affecting millions globally. This project replicates the primary biostatistical analyses from a Phase 3 randomized controlled trial testing Xanomeline, a muscarinic receptor agonist delivered via transdermal skin patch against placebo in patients with mild-to-moderate Alzheimer's disease.
+Alzheimer's disease is a progressive neurodegenerative disorder affecting millions globally. This project replicates the primary biostatistical analyses from a Phase 3 randomized controlled trial testing Xanomeline, a muscarinic receptor agonist delivered via transdermal skin patch against placebo in patients with mild to moderate Alzheimer's disease.
 The dataset used is the publicly available CDISC ADaM Pilot Project dataset is a real FDA submission dataset widely used in the pharmaceutical industry for training and tool development. It contains data from 254 subjects across three treatment arms: Placebo, Xanomeline Low Dose (54mg), and Xanomeline High Dose (81mg).
 
 Objectives
@@ -22,12 +22,14 @@ Dataset
 
 Methods
 Table 1 — Baseline Demographics
-Descriptive statistics were computed for the Intent-to-Treat (ITT) population. Continuous variables are presented as mean (SD) and categorical variables as n (%). Between-arm differences were tested using ANOVA for continuous variables and chi-square for categorical variables.
+Descriptive statistics were computed for the Intent to Treat (ITT) population. Continuous variables are presented as mean (SD) and categorical variables as n (%). Between arm differences were tested using ANOVA for continuous variables and chi-square for categorical variables.
 Kaplan-Meier Survival Analysis
 Time to first dermatologic event was analyzed in the safety population using the Kaplan-Meier estimator. Between-arm differences were tested using the log-rank test. Confidence intervals are shown as shaded bands around each curve.
 MMRM — Primary Efficacy Analysis
 Change from baseline in ADAS-Cog(11) total score was analyzed using a Mixed Effects Model for Repeated Measures (MMRM) with the following specification:
+
 CHG ~ TRT01P + AVISIT + TRT01P:AVISIT + BASE + us(AVISIT | USUBJID)
+
 Fixed effects: Treatment arm, visit, treatment-by-visit interaction, baseline ADAS-Cog score
 Covariance structure: Unstructured (FDA recommended)
 Estimation method: REML
