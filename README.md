@@ -29,4 +29,21 @@ Generated summary tables and visualizations revealing treatment group difference
 
 - R (tidyverse, dplyr, ggplot2, survival, mmrm)
 
+## Results
+
+### Figure 1 — Kaplan-Meier: Time to First Dermatologic Event
+![KM Curve](Figure1_KaplanMeier.png)
+
+### Table 1 — Baseline Demographics (ITT Population)
+![Demographics](Table1_Demographics.png)
+
+### Table 2 — MMRM Results (ADAS-Cog Primary Efficacy)
+![MMRM](Table2_MMRM_Results.png)
+
+### Table 3 — Overall AE Summary
+![AE Summary](Table3_AE_Overall_Summary.png)
+
+### Table 4 — AEs by Body System (≥5% in any arm)
+![AE by System](Table4_AE_ByBodySystem.png)
+
 
