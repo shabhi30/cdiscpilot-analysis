@@ -1,6 +1,8 @@
 # CDISC pilot alzheimer's trial — complete biostatistical analysis
 #loading packages
 install.packages(c("haven","tidyverse","gtsummary","survival","broom","mmrm","flextable"))
+install.packages("webshot2")
+webshot2::install_chromium()
 library(haven)
 library(tidyverse)
 library(gtsummary)
@@ -70,7 +72,7 @@ table1
 
 table1 %>%
   as_flex_table() %>%
-  flextable::save_as_docx(path = "output/Table1_Demographics.docx")
+  flextable::save_as_image(path = "output/Table1_Demographics.png", zoom = 2)
 
 cat("Table 1 saved\n")
 #figure 1 - Kaplan Meier model for time to dermatologic event - dermatologic events are the primary safety signal of interest
@@ -196,7 +198,7 @@ broom::tidy(mmrm_fit) %>%
   )) %>%
   flextable() %>%
   autofit() %>%
-  flextable::save_as_docx(path = "output/Table2_MMRM_Results.docx")
+  save_as_image(path = "output/Table2_MMRM_Results.png", zoom = 2)
 
 cat("Table 2 saved\n")
 
@@ -258,7 +260,7 @@ overall_summary %>%
   bold(part = "header") %>%
   bg(bg = "#D6E4F0", part = "header") %>%
   autofit() %>%
-  save_as_docx(path = "output/Table3_AE_Overall_Summary.docx")
+   save_as_image(path = "output/Table3_AE_Overall_Summary.png", zoom = 2)
 
 cat("Table 3 saved\n")
 
@@ -296,7 +298,7 @@ ae_by_system %>%
   bold(part = "header") %>%
   bg(bg = "#D6E4F0", part = "header") %>%
   autofit() %>%
-  save_as_docx(path = "output/Table4_AE_ByBodySystem.docx")
+  save_as_image(path = "output/Table4_AE_ByBodySystem.png", zoom = 2)
 
 cat("Table 4 saved\n")
 
