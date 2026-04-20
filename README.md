@@ -4,6 +4,8 @@ This project explores CDISC clinical trial datasets (SDTM/ADaM) using R, focusin
 
 The goal of this project is to simulate real-world clinical data workflows, including preparing datasets for downstream statistical analysis and generating summary insights.
 
+Data: CDISC Pilot Study Dataset (publicly available at https://github.com/cdisc-org/sdtm-adam-pilot-project)
+
 ## Key Work
 
 - Cleaned and transformed subject-level and event-level clinical datasets  
@@ -21,12 +23,10 @@ The goal of this project is to simulate real-world clinical data workflows, incl
 
 ## Outputs
 
-Generated summary tables and visualizations to evaluate baseline characteristics, safety signals, and longitudinal trends.
+Generated summary tables and visualizations revealing treatment group differences in longitudinal outcomes; MMRM results demonstrated statistically significant improvement in the primary endpoint over 24 weeks.
 
 ## Tools Used
 
 - R (tidyverse, dplyr, ggplot2, survival, mmrm)
 
-## Relevance
 
-This project reflects real-world clinical data workflows similar to those used in clinical trials, including preparing datasets for statistical analysis and ensuring data consistency across domains.
