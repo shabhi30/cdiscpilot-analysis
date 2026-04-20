@@ -1,8 +1,9 @@
 # CDISC pilot alzheimer's trial — complete biostatistical analysis
 #loading packages
 install.packages(c("haven","tidyverse","gtsummary","survival","broom","mmrm","flextable"))
-install.packages("webshot2")
-webshot2::install_chromium()
+# Install chromote which is what webshot2 actually uses
+install.packages("chromote")
+chromote::find_chrome()
 library(haven)
 library(tidyverse)
 library(gtsummary)
@@ -260,7 +261,7 @@ overall_summary %>%
   bold(part = "header") %>%
   bg(bg = "#D6E4F0", part = "header") %>%
   autofit() %>%
-   save_as_image(path = "output/Table3_AE_Overall_Summary.png", zoom = 2)
+  save_as_image(path = "output/Table3_AE_Overall_Summary.png", zoom = 2)
 
 cat("Table 3 saved\n")
 
@@ -306,6 +307,3 @@ cat("Table 4 saved\n")
 #verify output
 cat("\n=== Deliverables ===\n")
 list.files("output/")
-
-
-
